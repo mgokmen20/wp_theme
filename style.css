@@ -1,0 +1,673 @@
+/*
+Theme Name: UND Generationentandem Thema
+Theme URI: ###
+Author: Mehmet GÖKMEN
+Author URI: https://gokmennet.blogspot.com
+Description: UND Generationentandem WordPress thema.
+Version: 1.0
+*/
+
+
+
+
+/* Custom Container */
+.custom-container {
+    padding: 0px 5px 0px 5px;
+    font-size: 1.2rem;
+    
+}
+p{
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.custom-container img {
+    max-height: 700px;
+    object-fit: cover;
+}
+
+/* Header */
+.main-header {
+    position: sticky;
+    /* always stay on Top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(127, 17, 9, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-image {
+    max-width: 100px;
+    height: auto;
+}
+
+
+.menu-hamburger,
+.search-icon {
+    line-height: 1;
+}
+
+
+.search-container {
+    position: relative;
+    display: flex;
+    z-index: 101;
+}
+
+.search-icon:hover {
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
+.search-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 35px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    background-color: #ffff;
+    color: #000;
+    margin: auto 0;
+}
+
+.search-input.open {
+    width: 0px;
+    opacity: 1;
+    padding: 0 10px;
+    right: 45px;
+}
+
+/* Fullscreen Menu */
+.offcanvas-body {
+    overflow-y: auto;
+    /* If the menu content overflows, a vertical scrollbar will appear */
+    background-color: #f8f9fa;;
+    color: #000;
+}
+
+
+
+.offcanvas-body h5 {
+    color: #7f1109;
+    padding: 5px;
+    margin: 10px;
+}
+
+
+.nav-item li {
+    list-style: none;
+    text-decoration: none;
+    padding: auto;
+    font-size: 1.2rem;
+}
+
+.nav-link a {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-link a:hover {
+    background-color: #ffff;
+    color: #7f1109;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.8s;
+}
+
+
+
+
+/* Slider */
+
+.carousel {
+    overflow: hidden;
+    /* The page will not show anything else */
+    height: 700px;
+}
+
+
+
+.carousel-item img {
+    height: 700px;
+    /* Image fills the slider area */
+    object-fit: cover;
+    /* The image is cropped properly */
+
+}
+
+.carousel-caption {
+    bottom: 7%;
+    /* Header Position*/
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay black */
+
+}
+
+
+.btn-program {
+    color: white;
+    background-color: #7f1109;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 50%;
+}
+
+.btn-program:hover {
+    background-color: #BD4E4E;
+    color: white;
+}
+
+.parallax-effect{
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/OffenesHochhus.jpg'); 
+    min-height: 700px; 
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+}
+
+.card {
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-thumbnails {
+    padding: 10px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-thumbnails {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--text-color);
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+    color: var(--primary-color);
+}
+
+/* Event alani icin */
+.hover-effect { 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* Overlay Styling */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay black */
+    z-index: 1;
+    color: white;
+
+}
+
+/* Make text standout on overlay */
+.overlay h1,
+.overlay p {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    padding: 15px;
+    margin: auto;
+}
+
+/* Ensure image stays behind overlay */
+.position-relative img {
+    z-index: 0;
+}
+
+.btn-bar {
+    /* here for "Red claim" Buttons */
+    color: white;
+    background-color: #7f1109;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    height: 70px;
+    border-radius: 0;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.btn-bar:hover {
+    background-color: #BD4E4E;
+    color: white;
+
+}
+
+.btn-bar-blue {
+    /* here for Blue "claim" Buttons */
+    color: white;
+    background-color: #2F528F;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    height: 70px;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+
+.btn-bar-blue:hover {
+    background-color: #708CBC;
+    color: white;
+}
+
+.btn-program-blue {
+    /* Here for Blue program button */
+    color: white;
+    background-color: #2F528F;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 50%;
+}
+
+.btn-program-blue:hover {
+    background-color: #708CBC;
+    color: #ffff;
+}
+
+.img-header {
+    object-fit: cover;
+    width: 100%;
+    max-height: 700px;
+}
+
+
+
+.btn-Digitales-type1 {
+    background-color: #50701D;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-Digitales-type1:hover {
+    background-color: #B3CD89;
+    color: white;
+}
+
+.btn-Digitales-type2 {
+    background-color: white;
+    color: #50701D;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.btn-Digitales-type2:hover {
+    background-color: #B3CD89;
+    color: white;
+}
+
+.overlay-green {
+    background-color: rgba(0, 100, 0, 0.4);
+    /* Overlay Green */
+    z-index: 1;
+    color: white;
+}
+
+.overlay-yellow {
+    background-color: rgb(248, 228, 3, 0.4);
+    /* Overlay Yellow */
+    z-index: 1;
+    color: white;
+}
+
+.btn-generationenfestival {
+    background-color: #fbb925;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-generationenfestival:hover {
+    background-color: white;
+    color: #fbb925;
+    font-weight: bold;
+}
+
+.overlay-red {
+    background-color: rgba(255, 0, 0, 0.2);
+    /* Overlay Red */
+    z-index: 2;
+    color: white;
+    pointer-events: none;
+}
+
+.btn-red {
+    background-color: #7f1109;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+    
+}
+
+.btn-red:hover {
+    background-color: white;
+    color: #7f1109;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #7f1109;
+    color: white;
+    width: 100%;
+}
+
+.img-footer-logo {
+    max-width: 50px;
+    /* Icon size */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.logo-partners {
+    max-width: 100%;
+    /* Supporter logos size */
+    height: auto;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+footer p,
+footer a {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-bottom {
+    background-color: #7f1109;
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+
+/* Programm html style page */
+.btn-whiteframe,
+.btn-magazin {
+    color: white;
+    border: solid 1px #ffff;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    white-space: normal;
+}
+
+.btn-whiteframe:hover {
+    background-color: #ffff;
+    color: #7f1109;
+}
+
+.btn-magazin:hover {
+    background-color: #ffff;
+    color: #2F528F;
+}
+
+.btn-digitales-menu:hover {
+    background-color: #ffff;
+    color: #50701D;
+}
+
+/* Festival Pages */
+
+.btn-outline-dark {
+    border: 2px solid #000;
+    font-weight: 500;
+    background-color: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
+.past-events {
+    background-color: #7f1109;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px 5px 50px;
+    border-bottom: #ffff solid 2px;
+    color: #ffff;
+}
+
+.btn-festivalevent {
+    color: white;
+    font-size: 0.8rem;
+    margin: 10px;
+}
+.festival-event-cards{
+    border: none !important; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    margin-bottom: 1.5rem; 
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease; 
+    overflow: hidden;
+}
+.img-festival-program{
+    height: 200px; 
+    object-fit: cover;
+}
+.list-text li {
+    font-size: 1.3rem;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+}
+
+hr {
+    border: black;
+    border-top: #000 solid 3px;
+}
+
+
+
+.img-user{
+    width: 40px; 
+    height: 40px; 
+    margin-left: 5px; 
+    
+}
+
+.user-name {
+    font-size: 0.9rem;
+    display: none; /* Initially hide the user name */
+}
+
+.img-user {
+    transition: transform 0.6s ease;
+}
+
+.link-user {
+    display: flex;
+    align-items: center;
+}
+
+.link-user:hover .user-name {
+    display: inline-block !important; 
+}
+
+.link-user:hover .img-user {
+    transform: scale(1.3);
+}
+
+
+@media (max-width: 480px) {
+
+        .carousel {
+            height: 600px;
+        }
+    
+        .carousel-caption {
+            font-size: 1rem;
+            bottom: 15%;
+        }
+    
+        .carousel p {
+            font-size: 1rem;
+    
+        }
+    
+    
+        .event-section {
+            padding: 10px 0px 5px 10px;
+        }
+
+        a .user-name {
+            display: inline-block !important; 
+        }
+        .user-name{
+            font-size: 0.2rem;
+        }
+    }
+
+
+
+    /* Social Media Buttons */
+    .social-share-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .social-icon {
+        margin: 0 10px;
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .social-icon:hover {
+        color: #0073e6;
+    }
+/* Social Media Buttons ended     */
+
+
+
+
+/* Comment */
+/* title and image */
+.comments-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.media-body {
+    border-left: 4px solid #007bff;
+    padding-left: 20px;
+}
+
+.comment-list {
+    padding-left: 0;
+}
+
+.comment-list li {
+    list-style-type: none;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+/* Comment form */
+.comment-form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.comment-form .btn-primary {
+    border-radius: 25px;
+    padding: 10px 30px;
+}
+
+/* Comment autor name and date */
+.comment-body .d-flex .text-muted {
+    font-size: 0.9rem;
+}
+
+/* seperate for comment */
+.comment-body + .comment-body {
+    margin-top: 20px;
+}
